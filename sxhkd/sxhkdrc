@@ -2,12 +2,10 @@
 # wm independent hotkeys
 #
 
-# terminal emulator
-
-
-#gnome terminal
+#lacritty terminal emulator
 super + Return
-	gnome-terminal
+        alacrittygnome terminal
+
 
 # program launcher
 super + @space
