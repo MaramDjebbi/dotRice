@@ -13,10 +13,21 @@ bspc config gapless_monocle      true
 
 
 killall -q polybar
-polybar main
-
+polybar center &
+polybar wlan &
+polybar left & 
+polybar sysmenu &
+polybar sound &
+polybar keyboard &
+polybar battery &
 xsetroot -cursor_name left_ptr &
-bspc config top_padding 55
+
+killall dunst
+dunst &
+
+
+
+bspc config top_padding 40
 
 feh --bg-fill ~/.config/castle.jpg
 
