@@ -1,0 +1,86 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  drun-display-format: "{name}";
+  font: "JetBrainsMono Medium 15";
+  modi: "drun";
+  show-icons: true;
+  icon-theme: "Arc";
+}
+
+@theme "/dev/null"
+
+* {
+  bg: #1e1e2e66;
+  bg-alt: #585b7066;
+  bg-selected: #31324466;
+
+  fg: #cdd6f4;
+  fg-alt: #7f849c;
+
+  margin: 0;
+  padding: 0;
+  spacing: 0;
+}
+
+window {
+  width: 30%;
+  background-color: @bg;
+}
+
+element {
+  padding: 8 12;
+  background-color: #778DA9;
+  text-color: #ffffff;
+}
+
+element selected {
+  text-color: #ffffff;
+  background-color: #415A77;
+}
+
+element-text {
+  background-color: transparent;
+  text-color: inherit;
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 30;
+  padding: 0 10 0 0;
+  background-color: transparent;
+}
+
+entry {
+  padding: 12;
+  background-color: @bg-alt;
+  text-color: #ffffff;
+}
+
+inputbar {
+  border: 1;
+  border-color: #E0E1DD;
+  children: [prompt, entry];
+  background-color: #1B263B;
+}
+
+listview {      
+  border: 1;
+  border-color: #E0E1DD;
+  background-color: #778DA9;
+  columns: 2;
+  lines: 7;
+}
+
+mainbox {
+  children: [inputbar, listview];
+  background-color: @bg;
+}
+
+prompt {
+  enabled: true;
+  padding: 12 0 0 12;
+  background-color: @bg-alt;
+  text-color: #ffffff;
+}
+
